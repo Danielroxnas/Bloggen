@@ -17,9 +17,9 @@ namespace Blogg.Repository
             _context = context;
         }
 
-        public Post Get(string id)
+        public PostModel Get(string id)
         {
-            var blogg = new Post();
+            var blogg = new PostModel();
             using (var db = _context)
             {
 
@@ -30,14 +30,14 @@ namespace Blogg.Repository
             return blogg;
         }
 
-        public IEnumerable<Post> GetAll()
+        public IEnumerable<PostModel> GetAll()
         {
-            var blogg = new List<Post>();
+            var blogg = new List<PostModel>();
             blogg = _context.Post.ToList();
             return blogg;
         }
 
-        public void Add(Post model)
+        public void Add(PostModel model)
         {
             using (var db = _context)
             {

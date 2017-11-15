@@ -5,8 +5,8 @@ namespace Blogg.Repository
 {
     public interface IBloggRepository
     {
-        void Add(Post model);
-        Post Get(string id);
-        IEnumerable<Post> GetAll();
+        void Add(PostModel model);
+        PostModel Get(string id);
+        IEnumerable<PostModel> GetAll();
     }
 }

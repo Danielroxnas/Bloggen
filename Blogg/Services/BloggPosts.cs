@@ -14,19 +14,19 @@ namespace Blogg
 
         public readonly BloggingContext _context;
 
-        public IEnumerable<Models.Post> GetAllBloggPosts()
+        public IEnumerable<Models.PostModel> GetAllBloggPosts()
         {
             return new Repository.BloggRepository(_context).GetAll();
 
         }
 
-        public Models.Post GetBloggPost(string id)
+        public Models.PostModel GetBloggPost(string id)
         {
             return new Repository.BloggRepository(_context).Get(id);
 
         }
 
-        public void Save(Models.Post model)
+        public void Save(Models.PostModel model)
         {
             new Repository.BloggRepository(_context).Add(model);
         }

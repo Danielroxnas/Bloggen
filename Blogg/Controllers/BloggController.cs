@@ -36,7 +36,7 @@ namespace Blogg
         }
 
         [HttpPost]
-        public void Posts_([FromBody] Post model)
+        public void Posts_([FromBody] PostModel model)
         {
            new BloggPostService(_context).Save(model);
 

@@ -7,7 +7,7 @@ namespace Blogg.Models
 {
     public partial class BloggingContext : DbContext
     {
-        public virtual DbSet<Post> Post { get; set; }
+        public virtual DbSet<PostModel> Post { get; set; }
 
         public BloggingContext(DbContextOptions<BloggingContext> options)
         : base(options)
